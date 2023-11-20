@@ -15,12 +15,13 @@ int main()
 	vector<reference_wrapper<string>> vec{ slist.begin(), slist.end() };
 	shuffle(vec.begin(), vec.end(), mt19937{ random_device{}() });
 	copy(vec.begin(), vec.end(), ostream_iterator<string>{cout, " "});
-	
+
 	cout << '\n';
-	
-	for (auto& s : vec) {
-		s.get() += "can";
+
+	for (auto& s : slist) {
+		s += "can";
 	}
 
-	copy(slist.begin(), slist.end(), ostream_iterator<string>{cout, " "});
+	copy(vec.begin(), vec.end(), ostream_iterator<string>{cout, " "});
+	
 }
