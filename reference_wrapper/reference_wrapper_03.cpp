@@ -2,18 +2,19 @@
 #include <algorithm>
 #include <iterator>
 
-
-struct Biggie
+struct BiggiePred
 {
+	//...
 	bool operator()(int i) const
 	{
 		//code
 		return true;
 	}
 	//very big data
+	char buf[4096]{};
 };
 
-const Biggie gbig;
+const BiggiePred gbig;
 
 std::vector<int> ivec;
 
