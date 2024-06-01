@@ -12,11 +12,11 @@ int main()
 
 	int& aref = a;
 	func(aref);
-	std::cout << a << "\n";
+	std::cout << a << '\n';
 
 	func<int&>(a);
-	std::cout << a << "\n";
+	std::cout << a << '\n';
 
 	func(std::ref(a));
-	std::cout << a << "\n";
+	std::cout << a << '\n';
 }
