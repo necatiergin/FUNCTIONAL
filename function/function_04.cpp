@@ -12,7 +12,7 @@ int main()
 	}
 	//catch (const std::exception& ex) {
 	catch (const std::bad_function_call& ex) {
-		std::cout << "exception caught : " << ex.what() << "\n";
-		std::cout << typeid(ex).name() << "\n";
+		std::cout << "exception caught : " << ex.what() << '\n';
+		std::cout << typeid(ex).name() << '\n';
 	}
 }
