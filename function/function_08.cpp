@@ -10,8 +10,8 @@ int main()
 	function<int(int)> f;
 
 	cout.setf(ios::boolalpha);
-	
-	cout << (f == nullptr) << "\n";
+
+	cout << (f == nullptr) << '\n';
 	if (f)
 		cout << "not empty\n";
 	else
@@ -19,7 +19,7 @@ int main()
 
 
 	f = foo;
-	cout << (f == nullptr) << "\n";
+	cout << (f == nullptr) << '\n';
 
 	if (f)
 		cout << "not empty\n";
