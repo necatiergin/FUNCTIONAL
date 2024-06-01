@@ -19,7 +19,7 @@ int main()
 	using namespace std;
 
 	reference_wrapper f = foo;
-	cout << f(5) << "\n";
+	cout << f(5) << '\n';
 	f = bar;
-	cout << f(5) << "\n";
+	cout << f(5) << '\n';
 }
