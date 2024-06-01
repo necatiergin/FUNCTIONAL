@@ -16,7 +16,7 @@ int main()
 	if (fnc) {
 		std::cout << "has a function\n";
 		auto x = fnc(20);
-		std::cout << "x = " << x << "\n";
+		std::cout << "x = " << x << '\n';
 	}
 	else {
 		std::cout << "empty\n";
@@ -27,7 +27,7 @@ int main()
 	if (fnc) {
 		std::cout << "has a function\n";
 		auto x = fnc(20);
-		std::cout << "x = " << x << "\n";
+		std::cout << "x = " << x << '\n';
 	}
 	else {
 		std::cout << "empty\n";
