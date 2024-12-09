@@ -1,8 +1,7 @@
-//bir reference_wrapper nesnesini bir fonksiyona bağlayabiliriz
+//reference_wrapper can be bound to a function
 
 #include <functional>
 #include <iostream>
-
 
 int foo(int x)
 {
@@ -16,10 +15,8 @@ int bar(int x)
 
 int main()
 {
-	using namespace std;
-
-	reference_wrapper f = foo;
-	cout << f(5) << '\n';
+	std::reference_wrapper f = foo;
+	std::cout << f(5) << '\n';
 	f = bar;
-	cout << f(5) << '\n';
+	std::cout << f(5) << '\n';
 }
