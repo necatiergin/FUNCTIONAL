@@ -10,10 +10,11 @@ int main()
 {
 	int a = 6, b = 13;
 
-	auto fn = std::bind(foo, a, b);
-	//auto fn = std::bind(foo, std::ref(a), std::ref(b));
+	auto fn1	 = std::bind(foo, a, b);
+	auto fn2 = std::bind(foo, std::ref(a), std::ref(b));
 
 	a = 49, b = 78;
 
-	fn();
+	fn1();
+	fn2();
 }
