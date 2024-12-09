@@ -1,4 +1,4 @@
-//reference_wrapper tamamlanmamış türler (incomplete types) ile kullanılabilir
+//reference_wrapper template argument may be an incomplete type
 
 #include <functional>
 
