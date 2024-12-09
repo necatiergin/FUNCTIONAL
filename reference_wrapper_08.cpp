@@ -1,4 +1,4 @@
-// reference_wrapper R value ifadesine bağlanamaz
+// reference_wrapper can not bind to r value expression
 
 #include <functional>
 #include <string>
@@ -7,10 +7,8 @@ int foo();
 
 int main()
 {
-	using namespace std;
-	
-	reference_wrapper<int> r3 = foo(); //gecersiz
-	reference_wrapper r2 = "ali"s; //gecersiz
-	reference_wrapper<const string> r3 = "ali"s; //gecersiz
-	reference_wrapper<const string> r4 = string{"necati"}; //gecersiz
+	//std::reference_wrapper<int> r3 = foo(); //invalid
+	//std::reference_wrapper r2 = "ali"s; //invalid
+	//std::reference_wrapper<const std::string> r3 = "ali"s; //invalid
+	//std::reference_wrapper<const std::string> r4 = std::string{ "necati" }; //invalid
 }
