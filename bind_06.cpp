@@ -12,10 +12,10 @@ int main()
 	generate(ivec.begin(), ivec.end(), [] {return rand() % 1000; });
 	int ival;
 
-	cout << "hangi degerden buyuk olanlar sayilsin: ";
+	cout << "enter the min. value: ";
 	cin >> ival;
 
 	cout << count_if(ivec.begin(), ivec.end(), [ival](int x) {return x > ival; }) << '\n';
 	cout << count_if(ivec.begin(), ivec.end(), bind(greater<int>{}, _1, ival)) << '\n';
-	cout << count_if(ivec.begin(), ivec.end(), bind(greater{}, _1, ival)); //transparent
+	cout << count_if(ivec.begin(), ivec.end(), bind(greater{}, _1, ival)); 
 }
