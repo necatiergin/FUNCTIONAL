@@ -1,15 +1,17 @@
 #include <utility>
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-	int a = 23, b = 56;
+	std::string s1{ "ali" }, s2{ "veli" };
 
-	//auto p = make_pair(a, b);
-	auto p = make_pair(ref(a), ref(b));
-	++p.first, ++p.second;
-	std::cout << "a = " << a << '\n';
-	std::cout << "b = " << b << '\n';
+	auto p1 = std::make_pair(s1, s2);
+	p1.first += "han";
+	p1.second += "can";
+	std::cout << s1 << ' ' << s2 << '\n';
+
+	auto p2 = std::make_pair(ref(s1), ref(s2));
+	p2.first += "han";
+	p2.second += "can";
+	std::cout << s1 << ' ' << s2 << '\n';
 }
