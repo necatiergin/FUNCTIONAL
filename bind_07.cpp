@@ -2,18 +2,17 @@
 #include <functional>
 #include <iostream>
 
-std::ostream& print(std::ostream& os, int x, int y)
+std::ostream& myprint(std::ostream& os, int x, int y)
 {
-	return os << x << ' ' << y << ' ';
+	return os << x << ' ' << y << '\n';
 }
 
 int main()
 {
-	using namespace std;
-	using namespace placeholders;
+	using namespace std::placeholders;
 
-	print(cout, 10, 20);
-	auto f = bind(print, ref(cout), _1, _2);
-	bind(print, ref(cout), _1, _2)(12, 45);
+	myprint(std::cout, 10, 20);
+	auto f = bind(myprint, ref(std::cout), _1, _2);
+	bind(myprint, ref(std::cout), _1, _2)(12, 45);
 	f(10, 20);
 }
