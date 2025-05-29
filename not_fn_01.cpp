@@ -6,7 +6,7 @@
 #include <iostream>
 #include <functional>
 
-CONSTEXPR bool isprime(int x)
+bool isprime(int x)
 {
 	if (x < 2) return false;
 
