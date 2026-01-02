@@ -1,7 +1,6 @@
 #include <functional>
 #include <iostream>
 
-
 class Myclass {
 public:
 	int foo(int)
