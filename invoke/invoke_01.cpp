@@ -33,5 +33,4 @@ int main()
 	std::cout << "a = " << a << '\n';
 	void (Myclass:: * pftr)(int, int) = &Myclass::foo;
 	invoke(pftr, m, 7, 9);
-
 }
